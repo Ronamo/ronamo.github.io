@@ -1,0 +1,241 @@
+/*  IMPORT FROM GOOGLE FONTS */
+@import url('http://fonts.googleapis.com/css?family=Cabin|Lobster');
+
+/* Variables */
+
+	// Fonts
+	@fontDisplay: 'Lobster';
+	@fontCopy: 'Cabin';
+
+	// Colors
+	@grey: #1a1a1a;
+	@darkblue: #2d5b6b;
+	@white: #ffffff;
+	@lightorange: #eacfa7;
+	@orange: orange;
+
+/* Derived Variables */
+@navbackground: @darkblue;
+@lightlink: @white;
+@hoverhighlight: @lightorange;
+@active: @orange;
+@bodylink: @orange;
+@bodytext: @white;
+
+/* Mixins */
+
+.nobox { padding: 0; margin: 0; display: inline; }
+.nodecoration { text-decoration: none; }
+
+
+
+/* Main Elements */
+
+html { 
+	overflow-y: scroll; 
+}
+
+body {
+	background-image: url('../images/bg.png');
+	background-repeat: repeat;
+	background-color: @grey;
+	position: relative;
+	min-height: 100%;
+}
+
+footer {
+	display: block;
+	width: 960px;
+	margin: 0px auto;
+	margin-top: 50px;
+	margin-bottom: 0px;
+	background-color: #2d5b6b;
+	position: relative;
+	bottom: 0px;
+
+	p.bodycopy {
+		padding: 20px;
+		width: 100%;
+		font-size: .8em;
+		line-height: .9em;
+		letter-spacing:  .1em;
+		text-align: center;
+	}
+	nav {
+		a {
+			padding-top: 20px;
+			font-size: 1em;
+		}
+	}
+}
+
+h1, h2{
+	font-size: 2em;
+	text-align: center;
+	font-family: Cabin;
+	color: #ddd;
+}
+
+header { 
+
+	display: block;
+	width: 960px;
+	margin: 0px auto;
+	height: 120px;
+	margin-bottom: 20px;
+
+	img {
+		position: relative;
+		top: -85px;
+		left: 350px;
+	}
+}
+
+nav {
+
+	text-align: center; 
+	margin-top: 60px;
+	vertical-align: middle;
+	padding-bottom: 5px;
+	padding-top: 3px;
+	background-color: @navbackground;
+	/* Gradient background */
+	background-image: linear-gradient(top, rgb(45,91,107) 100%, rgb(64,93,105) 60%);
+	background-image: -o-linear-gradient(top, rgb(45,91,107) 100%, rgb(64,93,105) 60%);
+	background-image: -moz-linear-gradient(top, rgb(45,91,107) 100%, rgb(64,93,105) 60%);
+	background-image: -webkit-linear-gradient(top, rgb(45,91,107) 100%, rgb(64,93,105) 60%);
+	background-image: -ms-linear-gradient(top, rgb(45,91,107) 100%, rgb(64,93,105) 60%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1, rgb(45,91,107)), color-stop(0.6, rgb(64,93,105)));
+
+	li.active { 
+		a {color: @active;}
+	}
+	a {
+		.nodecoration;
+
+		color: @lightlink;
+		font-family: @fontDisplay;
+		font-size: 1.8em;
+		margin-top: 30px;
+		padding-left: 10px;
+		padding-right: 10px;
+		border: none;
+		text-shadow: -2px 2px 4px #000;
+	    filter: dropshadow(color=#000, offx=-2, offy=2);
+
+		&:hover  {
+			color: @hoverhighlight;
+			text-shadow: -2px 2px 4px #804e00;
+    		filter: dropshadow(color=#804e00, offx=-2, offy=2);
+		}
+
+
+	}
+
+	ul { 
+		margin-left: 50px;
+	}
+
+}
+
+p {
+	font-family: @fontCopy; 
+	color: @bodytext;
+	margin: 0px auto -15px auto;
+	width: 600px;
+	padding-bottom: 30px;
+}
+
+
+ul { .nobox; }
+li { .nobox; }
+
+/* Classes */
+.bodycopy {
+	font-family: 'Cabin';
+	color: #fff;
+	font-size: 1.2em;
+	line-height: 1.3em;
+	letter-spacing: .1em;
+
+	a {
+		.nodecoration;
+		color: @bodylink;
+	}
+}
+
+.first { margin-left: -30px;}
+.gap { 
+	padding-right: 160px;
+}
+
+.hidden { display: none; }
+
+.portfolioItem {
+	width: 148px;
+	margin: 5px;
+	float: left;
+	border: 1px dashed #aaa;
+}
+
+
+
+/* ID'd Elements */
+
+#aboutMe {
+	display: block;
+	width: 960px;
+	margin: 0 auto;
+
+	h1 { 
+		font-size: 7em;  
+		margin-bottom: 30px; 
+		margin-top: -20px;
+	}
+
+}
+
+#portfolio {
+	margin: 0px auto;
+	width: 960px;
+
+	h1 {
+		font-size: 3em;
+		margin-bottom: 30px; 
+		margin-top: -20px;
+	}
+
+	h2 {
+		font-size: 2em; 
+		margin-bottom: 20px; 
+		margin-top: 0px;
+	}
+
+}
+
+#socialLinks {
+	display: block;
+	width: 960px;
+	margin: 0px auto;
+	text-align: center;
+	margin-top: 20px;
+
+	a { 
+		.nodecoration; 
+		color: @bodylink;
+
+	}
+
+	img { 
+		.nodecoration;  
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+}
+
+#folio {
+	margin: 0px auto;
+	width: 800px;
+}
+

@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Recipe Suggestor</title>
+	<link rel="stylesheet" href="./style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+	<div id="suggestion"><p>Can't decide what to have for dinner?</p><button>Get a suggestion!</button></div>
+	<script>
+	$(document).ready( function (){
+		$("#suggestion").find("button").on("click", function(){
+			$("#suggestion p").load("suggest.php");
+			$(this).text("Suggest something else");
+		});
+
+	});
+	</script>
+</body>
+</html>

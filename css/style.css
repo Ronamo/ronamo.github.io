@@ -1,0 +1,162 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin|Lobster);
+
+body {
+	/* background-color: #1a1a1a; */
+	background-image: url('../images/bg.png');
+	background-repeat: repeat;
+	position: relative;
+	min-height: 100%;
+	}
+html { overflow-y: scroll; }
+a {text-decoration: none;}
+ul, li { padding: 0; margin: 0; display: inline;}
+
+
+.last { padding-right: 30px;}
+
+header { display: block;
+	width: 960px;
+	margin: 0px auto;
+	height: 120px;
+	margin-bottom: 20px;
+	}
+footer { display: block;
+	width: 960px;
+	margin: 0px auto;
+	margin-top: 50px;
+	margin-bottom: 0px;
+	background-color: #2d5b6b;
+	position: relative;
+	bottom: 0px;
+	}
+nav {	
+	/* background-color: #2d5b6b; */
+	text-align: center; 
+	margin-top: 60px;
+	vertical-align: middle;
+	padding-bottom: 5px;
+	padding-top: 3px;
+	background-color: #2d5b6b;
+	/* Gradient background */
+	background-image: linear-gradient(top, rgb(45,91,107) 100%, rgb(64,93,105) 60%);
+	background-image: -o-linear-gradient(top, rgb(45,91,107) 100%, rgb(64,93,105) 60%);
+	background-image: -moz-linear-gradient(top, rgb(45,91,107) 100%, rgb(64,93,105) 60%);
+	background-image: -webkit-linear-gradient(top, rgb(45,91,107) 100%, rgb(64,93,105) 60%);
+	background-image: -ms-linear-gradient(top, rgb(45,91,107) 100%, rgb(64,93,105) 60%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(1, rgb(45,91,107)),
+		color-stop(0.6, rgb(64,93,105))
+	);
+
+}
+nav ul { margin-left: 50px;}
+
+#socialLinks{
+	display: block;
+	width: 960px;
+	margin: 0px auto;
+	text-align: center;
+	margin-top: 20px;
+}
+
+nav a {
+	font-family: Lobster;
+	font-size: 1.8em;
+	color: #fff;
+	text-decoration: none;
+	margin-top: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: none;
+	text-shadow: -2px 2px 4px #000;
+    filter: dropshadow(color=#000, offx=-2, offy=2);
+}
+#socialLinks a, #socialLinks img {
+	text-decoration: none;
+	border: none;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+nav a:hover {
+	color: #eacfa7;
+	text-shadow: -2px 2px 4px #804e00;
+    filter: dropshadow(color=#804e00, offx=-2, offy=2);
+}
+.gapa { padding-right: 170px;}
+
+header img {
+	position: relative;
+	top: -85px;
+	left: 350px;
+}
+
+h1, h2{
+	font-size: 2em;
+	text-align: center;
+	font-family: Cabin;
+	color: #ddd;
+}
+/* #socialLinks > h1 { font-family: Cabin; }*/
+.active a {
+	color: orange;
+}
+#aboutMe {
+	display: block;
+	width: 960px;
+	margin: 0 auto;
+}
+p {
+	font-family: 'Cabin'; 
+	color: #fff;
+	margin: 0px auto -15px auto;
+	width: 600px;
+	padding-bottom: 30px;
+}
+#aboutMe h1 { font-size: 7em;  margin-bottom: 30px; margin-top: -20px;}
+
+.bodycopy {
+	font-family: 'Cabin';
+	color: #fff;
+	font-size: 1.2em;
+	line-height: 1.3em;
+	letter-spacing: .1em;
+}
+
+.bodycopy a {
+	color: orange;
+	text-decoration: none;
+}
+footer p.bodycopy {
+	padding: 20px;
+	width: 100%;
+	font-size: .8em;
+	line-height: .9em;
+	letter-spacing:  .1em;
+	text-align: center;
+}
+footer nav a {
+	padding-top: 20px;
+	font-size: 1em;
+}
+#portfolio {
+	margin: 0px auto;
+	width: 960px;
+}
+#folio {
+	margin: 0px auto;
+	width: 800px;
+}
+#portfolio h1 { font-size: 3em;  margin-bottom: 30px; margin-top: -20px;}
+#portfolio h2 { font-size: 2em; margin-bottom: 20px; margin-top: 0px;}
+
+.portfolioItem {
+	width: 148px;
+	margin: 5px;
+	float: left;
+	border: 1px dashed #aaa;
+	}

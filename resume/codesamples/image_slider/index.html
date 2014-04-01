@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>Simple Image Slider</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <style type="text/css">
+        #slideshowImages { display: none; }
+        #slideshowMainAttraction { display: block; position: relative;}
+        a.slideshowBack, a.slideshowForward { font-size: 24px; font-weight: bold; color: white; background-color: black;}
+        a.slideshowBack { position: absolute; display: block; top: 40%; left: -10px;}
+        a.slideshowForward { position: absolute; display: block; top:40%; left: 230px;}
+        figcaption {
+            display: block; 
+            position: absolute; 
+            bottom: 10px; 
+            left: -10px;
+            background-color: #add; 
+            width: 250px;
+            padding: 3px 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="slideshow">
+    <figure id="slideshowMainAttraction">
+        <img src="http://placehold.it/240x320&text=Photo1" alt="480*640" />
+        <figcaption>Caption</figcaption>
+        <a class="slideshowBack">&lt;</a>
+        <a class="slideshowForward">&gt;</a>
+    </figure>
+
+    <ul id="slideshowImages">
+        <li><img src="http://placehold.it/240x320/ffaaaa/&text=Dummy+Image+1">Caption 1</li>
+        <li><img src="http://placehold.it/240x320/aaddaa/&text=Dummy+Image+2">Caption 2</li>
+        <li><img src="http://placehold.it/240x320/1111ff/&text=Dummy+Image+3">Caption 3</li>
+        <li><img src="http://placehold.it/240x320/ffdddd/&text=Dummy+Image+4">Caption 4</li>
+        <li><img src="http://placehold.it/240x320/dddddd/&text=Dummy+Image+5">Caption 5</li>        
+    </ul>
+</div>
+<script>
+    // Get all images in the slideshow
+    var list = $('#slideshowImages li');
+    var currentItem = 0;
+
+    function changeToSlide(index) {
+        // Return only the current li we're working on
+        var active = list.eq(index);
+        // The images are loaded in a hidden list. Set the visible image to one of those
+        // list items' source images.
+        $('#slideshowMainAttraction img').attr('src', active.find("img").attr('src'));
+        // Set the caption, also
+        $('#slideshowMainAttraction figcaption').text(active.text());
+    }
+
+    $('.slideshowForward').click(function() {
+        // Use modulo to set the index back to 0 when the end of the list is reached
+        changeToSlide(currentItem=(currentItem+1)%list.length);
+    });
+
+    $('.slideshowBack').click(function() {
+        // If we're not at zero, move to the previous item. Otherwise, the last item.
+        changeToSlide(currentItem=currentItem?currentItem-1:list.length-1);
+    });
+    // Initialize the slideshow.
+    changeToSlide(0);
+</script>
+</body>
+</html>

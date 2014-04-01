@@ -1,0 +1,9 @@
+Ham
+Pork
+Beef
+Veal
+Sausage
+Turkey
+Chicken
+Duck
+Lamb
